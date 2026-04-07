@@ -237,13 +237,10 @@ const SCHEDULE = [
 
 const NAV_ITEMS = [
   { href: '#about', label: 'About' },
-  { href: '#topics', label: 'Topics' },
+  { href: '#cfp', label: 'Call for Papers' },
   { href: '#speakers', label: 'Speakers' },
-  { href: '#dates', label: 'Dates' },
-  { href: '#submission', label: 'Submission' },
   { href: '#schedule', label: 'Schedule' },
   { href: '#organizers', label: 'Organizers' },
-  { href: '#sponsors', label: 'Sponsors' },
   { href: '#contact', label: 'Contact' },
 ];
 
@@ -401,10 +398,9 @@ function App() {
             <span className="hero-badge-dot"></span>
             COLM 2026 Workshop
           </div>
-          <h1>ManuGenesis</h1>
-          <p className="hero-subtitle">
-            Agentic AI for Autonomous Design, Manufacturing, and Supply Chain
-          </p>
+          <h1 className="hero-title-oneline">
+            ManuGenesis: Agentic AI for Autonomous Design, Manufacturing, and Supply Chain (COLM, 2026)
+          </h1>
           <div className="hero-meta">
             <div className="hero-meta-item">
               <span className="hero-meta-icon">{'\u{1F4C5}'}</span>
@@ -420,7 +416,7 @@ function App() {
             </div>
           </div>
           <div className="hero-actions">
-            <a href="#submission" className="btn btn-primary">
+            <a href="#cfp" className="btn btn-primary">
               Submit a Paper &#8599;
             </a>
             <a href="#about" className="btn btn-outline">
@@ -447,40 +443,41 @@ function App() {
             <div className="about-content">
               <div className="about-text">
                 <p>
-                  Large language models can now reason over goals, plan multi-step actions, use external tools,
-                  and work with humans in the loop. This matters a lot for <strong>design, manufacturing, and supply chains</strong>,
-                  where decisions are tightly connected. Design choices depend on engineering constraints.
-                  Manufacturing plans depend on what tools and processes are available. Supply chain decisions
-                  have to deal with <strong>uncertainty, cost, and downstream needs</strong>. These workflows span
-                  technical documents, simulation tools, enterprise software, robotics, and human know-how.
+                  Recent progress in large language models (LLMs) has enabled a new class of <em>agentic
+                  AI</em> systems that can <strong>reason over goals, plan multi-step actions, call
+                  external tools, and interact with humans in the loop</strong>. This shift is especially
+                  relevant to <strong>design, manufacturing, and supply-chain workflows</strong>, where
+                  decisions rarely happen in isolation: design choices depend on engineering constraints,
+                  manufacturing plans depend on available tools and process limits, and supply-chain
+                  decisions must respond to uncertainty, cost, and downstream execution requirements.
                 </p>
                 <p>
-                  Building AI systems for these settings raises <strong>open research questions</strong> that matter
-                  well beyond manufacturing: <strong>reliable tool use</strong>, multimodal reasoning over mixed data
-                  types, long-horizon planning across many steps, interaction with <strong>digital twins and
-                  simulators</strong>, and human-AI collaboration in safety-critical settings where mistakes are
-                  expensive or dangerous.
+                  These workflows are inherently <strong>multi-stage and information-rich</strong>,
+                  spanning technical documents, simulation environments, enterprise software, robotics,
+                  and human expertise. As a result, they require AI systems that can do more than
+                  generate text or make one-shot predictions; they require systems that can{' '}
+                  <strong>coordinate across steps, integrate heterogeneous information, and support
+                  decision-making under real operational constraints</strong>.
                 </p>
                 <p>
-                  <strong>ManuGenesis</strong> brings together researchers and practitioners who are interested in
-                  grounding language-model-based agents in high-impact industrial workflows. We aim to
-                  <strong> connect communities that rarely meet in one place</strong>: language modeling, agentic AI,
-                  robotics, industrial AI, manufacturing systems, and supply chain research. We expect participation
-                  from both academic researchers and industry practitioners.
+                  At the same time, this setting exposes some of the most central open questions for
+                  agentic AI, including <strong>reliable tool use, multimodal reasoning, long-horizon
+                  planning, interaction with digital twins and simulators</strong>, and{' '}
+                  <strong>human–AI collaboration in safety- and quality-critical environments</strong>.
                 </p>
                 <p>
-                  We are committed to <strong>supporting junior researchers</strong>. The workshop offers flexible
-                  submission formats, spotlight opportunities for students and early-career researchers, and K-12
-                  outreach activities. We have also worked to ensure diversity across organizers, speakers, and
-                  panelists.
+                  By focusing on autonomous design, manufacturing, and supply chains,{' '}
+                  <strong>ManuGenesis</strong> creates a meeting point for researchers and practitioners
+                  interested in grounding language-model-based agents in high-impact real-world
+                  workflows, while also using these workflows to sharpen the next generation of research
+                  on planning, interaction, reliability, and deployment.
                 </p>
                 <p>
-                  Our workshop is related to recent workshops on agentic AI and AI for scientific discovery, but
-                  has a different focus. The <strong>ICLR 2025 workshop on Agentic AI for Science</strong> covers
-                  agentic systems broadly but is not centered on manufacturing. The <strong>NeurIPS 2025 AI4Mat
-                  workshop</strong> focuses on materials discovery rather than language-model-based agents across the
-                  full industrial pipeline. <strong>ManuGenesis</strong> is specifically about language-model-centered
-                  agentic systems for design, manufacturing, and supply chains.
+                  The workshop aims to <strong>connect communities that rarely meet in one venue</strong>:
+                  language modeling, agentic AI, robotics, industrial AI, manufacturing systems, and
+                  supply-chain research. We expect participation from researchers in language models,
+                  planning, robotics, optimization, and human–AI interaction, as well as practitioners
+                  from manufacturing and technology companies.
                 </p>
               </div>
               <div className="about-highlights">
@@ -518,17 +515,28 @@ function App() {
         </div>
       </section>
 
-      {/* Topics */}
-      <section className="section section-alt" id="topics">
+      {/* Call for Papers (unified) */}
+      <section className="section section-alt" id="cfp">
         <div className="container">
           <FadeIn>
             <div className="section-header">
-              <div className="section-label">Call for Papers</div>
-              <h2 className="section-title">Topics of Interest</h2>
+              <div className="section-label">Submit Your Work</div>
+              <h2 className="section-title">Call for Papers</h2>
               <p className="section-description">
-                We invite submissions across a wide range of topics connecting agentic AI with design, manufacturing, and supply chains. Topics include but are not limited to:
+                We invite submissions on agentic AI for autonomous design, manufacturing, and
+                supply-chain workflows. All submissions are <strong>non-archival</strong> and
+                managed via <strong>OpenReview</strong>.
               </p>
             </div>
+          </FadeIn>
+
+          <FadeIn>
+            <h3 className="cfp-subheading" id="topics">Scope and Topics</h3>
+            <p className="cfp-sub-desc">
+              We welcome submissions across a wide range of topics connecting agentic AI with
+              design, manufacturing, and supply chains. Representative topics include, but are
+              not limited to:
+            </p>
           </FadeIn>
 
           <div className="topics-grid">
@@ -542,6 +550,186 @@ function App() {
               </FadeIn>
             ))}
           </div>
+
+          <FadeIn>
+            <h3 className="cfp-subheading" id="dates">Important Dates</h3>
+            <p className="cfp-sub-desc">All deadlines are 11:59 PM Anywhere on Earth (AoE).</p>
+            <div className="timeline">
+              {DATES.map((item, i) => (
+                <div className="timeline-item" key={i}>
+                  <div className={`timeline-dot ${item.highlight ? 'highlight' : ''}`}></div>
+                  <div className="timeline-content">
+                    <div className="timeline-date">{item.date}</div>
+                    <div className="timeline-label">{item.label}</div>
+                    {item.note && <div className="timeline-note">{item.note}</div>}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </FadeIn>
+
+          <FadeIn>
+            <h3 className="cfp-subheading" id="submission">Submission Overview</h3>
+            <div className="submission-card">
+              <p>
+                We accept <strong>extended abstracts (2–4 pages)</strong>, short research papers,
+                system/demo papers, and position papers. All submissions are{' '}
+                <strong>non-archival</strong> and managed through <strong>OpenReview</strong>.
+                Please use the COLM 2026 LaTeX template.
+              </p>
+
+              <div className="submission-details">
+                <div className="submission-detail">
+                  <h4>Format</h4>
+                  <p>2–4 pages extended abstract or short paper (excluding references), using the COLM 2026 LaTeX template.</p>
+                </div>
+                <div className="submission-detail">
+                  <h4>Review Process</h4>
+                  <p>Each submission receives at least two reviews when feasible via OpenReview.</p>
+                </div>
+                <div className="submission-detail">
+                  <h4>Submission Platform</h4>
+                  <p>OpenReview. All listed authors must have an up-to-date OpenReview profile.</p>
+                </div>
+                <div className="submission-detail">
+                  <h4>Evaluation Criteria</h4>
+                  <p>Relevance, clarity, technical or practical contribution, and potential to stimulate discussion.</p>
+                </div>
+                <div className="submission-detail">
+                  <h4>Originality</h4>
+                  <p>Submissions must present original work. Papers under review or already published in peer-reviewed venues cannot be submitted.</p>
+                </div>
+                <div className="submission-detail">
+                  <h4>Anonymity</h4>
+                  <p>Submissions must follow double-blind review. No identifying information in the paper or supplementary material.</p>
+                </div>
+                <div className="submission-detail">
+                  <h4>Authorship</h4>
+                  <p>All listed authors must have contributed substantially. LLMs cannot be listed as authors but may be cited as tools.</p>
+                </div>
+                <div className="submission-detail">
+                  <h4>Conflicts of Interest</h4>
+                  <p>Handled by excluding conflicted organizers from decision-making and reviewer assignment.</p>
+                </div>
+              </div>
+
+              <p>
+                We welcome <strong>both mature projects and promising early-stage work</strong>.
+                Accepted papers will be presented as posters or spotlight talks. Authors are
+                encouraged to discuss the ethical implications of their research where relevant.
+              </p>
+              <a
+                href="https://openreview.net"
+                className="btn-submit"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Submit on OpenReview &#8599;
+              </a>
+              <p style={{ marginTop: '12px', fontSize: '0.85rem', color: 'var(--text-tertiary)' }}>
+                OpenReview submission site link will be updated soon.
+              </p>
+            </div>
+          </FadeIn>
+
+          <FadeIn>
+            <h3 className="cfp-subheading">Submission Guidelines</h3>
+            <div className="cfp-guidelines">
+              <p>
+                Submissions must adhere to the <strong>COLM 2026 submission format</strong> and
+                be submitted as PDFs through the{' '}
+                <a href="https://openreview.net" target="_blank" rel="noopener noreferrer">OpenReview platform</a>.
+                All submissions will undergo a rigorous double-blind peer review process.
+                Accepted papers will be included in the ManuGenesis workshop non-archival
+                proceedings.
+              </p>
+              <ul>
+                <li>
+                  <strong>Deadlines:</strong> Submission deadlines are strict, and no extensions
+                  will be granted. Placeholder/dummy abstracts are not allowed.
+                </li>
+                <li>
+                  <strong>Formatting:</strong> Submissions must use the{' '}
+                  <a href="https://colmweb.org/" target="_blank" rel="noopener noreferrer">COLM 2026 LaTeX template</a>.
+                  We accept extended abstracts and short papers of <strong>2&ndash;4 pages</strong>{' '}
+                  (excluding references), as well as system/demo and position papers.
+                </li>
+                <li>
+                  <strong>Submission Types:</strong> Extended abstracts, short research papers,
+                  system or demo papers, and position papers are all welcome.
+                </li>
+                <li>
+                  <strong>Authorship:</strong> All listed authors must have contributed
+                  substantially to the work and agree to its submission. Large Language Models
+                  (LLMs) cannot be listed as authors but may be cited as tools if used appropriately.
+                </li>
+                <li>
+                  <strong>Anonymity:</strong> Submissions must follow the double-blind review
+                  process. Authors should ensure that no identifying information appears in the
+                  paper, supplementary material, or any external links.
+                </li>
+                <li>
+                  <strong>Originality:</strong> Submissions must present original work. Papers
+                  under review at, or published in, other peer-reviewed venues cannot be
+                  submitted. Previously presented work in non-archival workshops is allowed but
+                  must be appropriately anonymized.
+                </li>
+                <li>
+                  <strong>Ethics:</strong> Authors are encouraged to include a section on the
+                  ethical implications of their research and data use. Submissions must comply
+                  with the{' '}
+                  <a href="https://colmweb.org/" target="_blank" rel="noopener noreferrer">COLM Code of Ethics</a>.
+                </li>
+                <li>
+                  <strong>Code of Conduct:</strong> Authors are required to adhere to the{' '}
+                  <a href="https://colmweb.org/" target="_blank" rel="noopener noreferrer">COLM Code of Conduct</a>.
+                </li>
+              </ul>
+            </div>
+
+            <h3 className="cfp-subheading">Reviewing Process</h3>
+            <div className="cfp-guidelines">
+              <p>
+                Each submission will undergo a rigorous double-blind peer review process.
+                Submissions will be evaluated on <strong>relevance, clarity, technical or
+                practical contribution, and potential to stimulate discussion</strong>. Each
+                submission will receive at least two reviews when feasible from program
+                committee members spanning agentic AI, manufacturing systems, robotics, and
+                industrial AI.
+              </p>
+              <p>Reviewers, including organizers, will not evaluate submissions from individuals who:</p>
+              <ul>
+                <li>Have been colleagues within the same organization in the past three years.</li>
+                <li>Have co-authored publications within the last three years.</li>
+                <li>Are currently affiliated with the same institution as the submitting authors.</li>
+              </ul>
+              <p>
+                To ensure an unbiased review process, we recruit reviewers from diverse
+                institutions and varying levels of expertise. Conflicts of interest are handled
+                by excluding conflicted organizers from decision-making and reviewer assignment.
+                Only unpublished work will be accepted; submissions already published elsewhere
+                will be desk-rejected.
+              </p>
+            </div>
+
+            <h3 className="cfp-subheading">Publication and Presentation Policies</h3>
+            <div className="cfp-guidelines">
+              <p>
+                Accepted papers will be hosted on the workshop website as part of the
+                non-archival proceedings. At least one author of each accepted paper is required
+                to register for COLM 2026 and present their work at the workshop, either as an
+                oral spotlight or a poster, as determined by the organizers. Presenters are
+                encouraged to clearly explain the contributions and implications of their work.
+                Virtual presentation options may be considered for authors unable to attend in
+                person, in line with COLM&rsquo;s participation policy.
+              </p>
+              <p>
+                <strong>Camera-Ready and Poster Guidelines.</strong> Detailed camera-ready
+                instructions and poster size guidelines will be shared with authors after
+                acceptance notifications.
+              </p>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -581,101 +769,6 @@ function App() {
               {PANELISTS.map((person, i) => (
                 <PersonCard key={i} person={person} />
               ))}
-            </div>
-          </FadeIn>
-        </div>
-      </section>
-
-      {/* Important Dates */}
-      <section className="section section-alt" id="dates">
-        <div className="container">
-          <FadeIn>
-            <div className="section-header">
-              <div className="section-label">Important Dates</div>
-              <h2 className="section-title">Key Deadlines</h2>
-              <p className="section-description">
-                All deadlines are 11:59 PM Anywhere on Earth (AoE).
-              </p>
-            </div>
-          </FadeIn>
-
-          <FadeIn>
-            <div className="timeline">
-              {DATES.map((item, i) => (
-                <div className="timeline-item" key={i}>
-                  <div className={`timeline-dot ${item.highlight ? 'highlight' : ''}`}></div>
-                  <div className="timeline-content">
-                    <div className="timeline-date">{item.date}</div>
-                    <div className="timeline-label">{item.label}</div>
-                    {item.note && <div className="timeline-note">{item.note}</div>}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </FadeIn>
-        </div>
-      </section>
-
-      {/* Submission */}
-      <section className="section" id="submission">
-        <div className="container">
-          <FadeIn>
-            <div className="section-header">
-              <div className="section-label">Submit</div>
-              <h2 className="section-title">Paper Submission</h2>
-            </div>
-          </FadeIn>
-
-          <FadeIn>
-            <div className="submission-card">
-              <h3>Submit Your Work</h3>
-              <p>
-                We accept <strong>extended abstracts (2-4 pages)</strong>, short research papers, system/demo papers,
-                and position papers. All submissions are <strong>non-archival</strong>. Please use the
-                COLM 2026 LaTeX template for formatting.
-              </p>
-
-              <div className="submission-details">
-                <div className="submission-detail">
-                  <h4>Format</h4>
-                  <p>2-4 pages extended abstract or short paper (excluding references), using the COLM 2026 LaTeX template</p>
-                </div>
-                <div className="submission-detail">
-                  <h4>Review Process</h4>
-                  <p>Each submission gets <strong>at least two reviews</strong> via OpenReview</p>
-                </div>
-                <div className="submission-detail">
-                  <h4>Submission Platform</h4>
-                  <p>OpenReview</p>
-                </div>
-                <div className="submission-detail">
-                  <h4>Evaluation Criteria</h4>
-                  <p>Relevance, clarity, technical or practical contribution, and potential to start discussion</p>
-                </div>
-              </div>
-
-              <p>
-                We welcome <strong>both mature projects and early-stage work</strong>. If you have a
-                promising idea or preliminary results, we want to hear about it. Accepted papers will
-                be presented as posters or spotlight talks.
-              </p>
-              <p>
-                <strong>Conflicts of interest</strong> are handled by excluding conflicted organizers
-                from reviewing and decision-making for the relevant submissions.
-              </p>
-
-              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-              <a
-                href="https://openreview.net"
-                className="btn-submit"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Submit on OpenReview &#8599;
-              </a>
-              <p style={{ marginTop: '12px', fontSize: '0.85rem', color: 'var(--text-tertiary)' }}>
-                OpenReview submission site link will be updated soon.
-              </p>
             </div>
           </FadeIn>
         </div>
@@ -732,7 +825,8 @@ function App() {
         </div>
       </section>
 
-      {/* Sponsors */}
+      {/* Sponsors — hidden until finalized */}
+      {false && (
       <section className="section section-alt" id="sponsors">
         <div className="container">
           <FadeIn>
@@ -757,6 +851,7 @@ function App() {
           </FadeIn>
         </div>
       </section>
+      )}
 
       {/* Contact */}
       <section className="section" id="contact">
@@ -792,7 +887,7 @@ function App() {
           <div className="footer-links">
             <a href="https://colmweb.org" target="_blank" rel="noopener noreferrer">COLM 2026</a>
             <a href="https://colmweb.org/cfw.html" target="_blank" rel="noopener noreferrer">Call for Workshops</a>
-            <a href="#submission">Submit a Paper</a>
+            <a href="#cfp">Submit a Paper</a>
             <a href="mailto:manugenesis@googlegroups.com">Contact</a>
           </div>
           <div className="footer-divider"></div>
